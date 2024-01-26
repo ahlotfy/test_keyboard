@@ -1,0 +1,115 @@
+@keyframes repet-color {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root .keyboard_body {
+  width: 95%;
+  height: 40%;
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 9px 0px black;
+  border: 1px solid #312e2e;
+}
+
+#root .keyboard_body .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#root .keyboard_body .container .left_part, #root .keyboard_body .container .right_part, #root .keyboard_body .container .center_part {
+  height: 100%;
+}
+
+#root .keyboard_body .container .left_part {
+  width: 70%;
+}
+@media (max-width: 992px) {
+  #root .keyboard_body .container .left_part {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  #root .keyboard_body .container .left_part {
+    width: 100%;
+  }
+}
+
+#root .keyboard_body .container .center_part {
+  width: 15%;
+}
+@media (max-width: 992px) {
+  #root .keyboard_body .container .center_part {
+    width: 20%;
+  }
+}
+@media (max-width: 768px) {
+  #root .keyboard_body .container .center_part {
+    display: none;
+  }
+}
+
+#root .keyboard_body .container .right_part {
+  width: 15%;
+}
+@media (max-width: 992px) {
+  #root .keyboard_body .container .right_part {
+    display: none;
+  }
+}
+
+#root .keyboard_body .container table {
+  width: 100%;
+  height: 100%;
+  background-color: #626262;
+}
+
+#root .keyboard_body .container table tr td {
+  background: black;
+  text-align: center;
+  width: 50px;
+  min-width: 30px;
+  font-size: 12px;
+  font-family: sans-serif;
+  color: red;
+  border: 1px solid #312e2e;
+  box-shadow: 0px 0px 2px 0px black;
+}
+#root .keyboard_body .container table tr td, #root .keyboard_body .container table tr td.i {
+  animation: repet-color 20s infinite;
+}
+#root .keyboard_body .container table tr td.active {
+  background: #eee;
+}
+#root .keyboard_body .container table tr td.redragon {
+  color: red !important;
+}
+#root .keyboard_body .container table tr td.empty {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}/*# sourceMappingURL=app.css.map */
