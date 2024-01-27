@@ -156,7 +156,9 @@ const App = () => {
           <table>
             <tbody>
               <tr>
-                <td className={code === "LaunchApp2" ? "active" : ""}>PRTSC</td>
+                <td className={code === "LaunchApp2" ? "active" : ""}>
+                  <i className="fa-solid fa-calculator"></i>
+                </td>
                 <td className={code === "ScrollLock" ? "active" : ""}>SCRLK</td>
                 <td className={code === "Pause" ? "active" : ""}>PAUSE</td>
               </tr>
